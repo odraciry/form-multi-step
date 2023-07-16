@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import {  styled } from "styled-components";
 
 export const Step2Style = styled.div`
     z-index: 2;
@@ -43,18 +43,62 @@ export const Step2Style = styled.div`
             justify-content: left;
             border: 1px solid hsl(231, 11%, 63%);
             border-radius: 6px;
+            background: none;
             img{
                 margin: 1rem;
             }
             div{
                 h2{
                     color: hsl(213, 96%, 18%);
+                    text-align: left;
                 }
                 p{
                     color: hsl(231, 11%, 63%);
+                    font-size: 1rem;
+                    text-align: left;
+                }
+                span{
+                    color: hsl(213, 96%, 18%);
+                    font-size: .8rem;
+                    font-weight: 500;
+                    transition: 1s all;
                 }
             }
-
+        }
+        .plan:focus{
+            border: 2px solid hsl(213, 96%, 18%);
+        }
+    }
+    #escolha{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 5rem;
+        align-items: center;
+        p{
+            font-weight: 700;
+            color: hsl(213, 96%, 18%);
+            margin: 0 1.5rem;
+            transition: 1s all;
+        }
+        button{
+            width: 3rem;
+            height: 1.6rem;
+            border: none;
+            border-radius: 15px;
+            background-color: hsl(213, 96%, 18%);
+            position: relative;
+        }
+        span{
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: white;
+            left: 0;
+            top: 0;
+            margin: .3rem;
+            transition: 1s all;
         }
     }
 `;

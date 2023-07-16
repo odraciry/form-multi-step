@@ -31,6 +31,7 @@ export const Step1 = () => {
         if(check){
             context.setterStep1(user)
         }
+        console.log(context.getStep2)
     }, [user])
     return (
         <Step1Style>

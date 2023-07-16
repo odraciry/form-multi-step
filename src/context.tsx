@@ -1,6 +1,7 @@
 import { json } from "node:stream/consumers";
 import { createContext, useState } from "react";
 import { IUser } from "./components/steps/step1";
+import { IPlan } from "./components/steps/step2";
 
 interface StepProvider {
     step: number,
@@ -12,6 +13,8 @@ interface StepProvider {
     date: object,
     getStep1: IUser,
     setterStep1: Function
+    getStep2: IPlan,
+    setterStep2: Function
 
 }
 
@@ -20,7 +23,7 @@ export const StepContext = createContext<StepProvider>({} as StepProvider);
 export const StepProvider = ({ children }: { children: React.ReactNode }) => {
     const [step, setStep] = useState<number>(1);
     const [step1, setStep1] = useState({} as IUser);
-    const [step2, setStep2] = useState();
+    const [step2, setStep2] = useState({} as IPlan);
     const [step3, setStep3] = useState();
     const [step4, setStep4] = useState();
     const [date, setDate] = useState<Object>({});
@@ -35,15 +38,20 @@ export const StepProvider = ({ children }: { children: React.ReactNode }) => {
         console.log(user)
         setStep1(user)
     }
+
+    const getStep2 = {
+        plano : step2.plano,
+        valor: step2.valor
+    }
+    const setterStep2 = (plan: IPlan) => {
+        console.log('step2 ok!')
+        console.log(plan)
+        setStep2(plan)
+    }
    
     const addDados = (dados: IUser) => {
         console.log(dados)
         setStep1(dados)
-
-        // if(step === 1) setStep1(dados)
-        // else if(step === 2) setStep2(dados)
-        // else if(step === 3) setStep3(dados)
-        // else setStep4(dados)
     }
 
     return(
@@ -56,7 +64,9 @@ export const StepProvider = ({ children }: { children: React.ReactNode }) => {
             step,
             date,
             setterStep1,
-            getStep1
+            getStep1,
+            setterStep2,
+            getStep2
         }}>
             {children}
         </StepContext.Provider>
