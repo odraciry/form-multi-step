@@ -12,11 +12,12 @@ interface IPagamento {
 }
 export interface IPlan {
     plano: string,
-    valor: string
+    valor: string,
+    pagamento: string
 }
 
 export const Step2 = () => {
-    const context = useContext(StepContext);
+    const context = useContext(StepContext); 
     const [yearly, setYearly] = useState<boolean>(false);
     const [monthly, setMonthly] = useState<boolean>(true);
     const [pagMonth, setPagMonth] = useState({} as IPagamento)
@@ -52,10 +53,10 @@ export const Step2 = () => {
             <div id="title">
                 <h1>Select your plan</h1>
                 <p>You have the option of monthly or yearly billing.</p>
-            </div>
+            </div> 
             <div id="plans">
                 <button className="plan" onClick={() => {
-                    monthly ? setPlan({ plano: 'Arcade', valor: pagMonth.arcade }) : setPlan({ plano: 'Arcade', valor: pagYear.arcade })
+                    monthly ? setPlan({ plano: 'Arcade', valor: pagMonth.arcade, pagamento: 'mo' }) : setPlan({ plano: 'Arcade', valor: pagYear.arcade, pagamento: 'yr' })
                     context.setterStep2(plan)
                 }}
                 
@@ -68,7 +69,7 @@ export const Step2 = () => {
                     </div>
                 </button>
                 <button className="plan" onClick={() => {
-                    monthly ? setPlan({ plano: 'Advanced', valor: pagMonth.advanced }) : setPlan({ plano: 'Advanced', valor: pagYear.advanced })
+                    monthly ? setPlan({ plano: 'Advanced', valor: pagMonth.advanced, pagamento: 'mo' }) : setPlan({ plano: 'Advanced', valor: pagYear.advanced, pagamento: 'yr' })
                     context.setterStep2(plan)
                 }}>
                     <img src={LogoAdvanced} />
@@ -79,7 +80,7 @@ export const Step2 = () => {
                     </div>
                 </button>
                 <button className="plan" onClick={() => { 
-                    monthly ? setPlan({ plano: 'Pro', valor: pagMonth.pro }) : setPlan({ plano: 'Pro', valor: pagYear.pro })
+                    monthly ? setPlan({ plano: 'Pro', valor: pagMonth.pro, pagamento: 'mo' }) : setPlan({ plano: 'Pro', valor: pagYear.pro, pagamento: 'yr' })
                     context.setterStep2(plan)
                 }}>
                     <img src={LogoPro} />

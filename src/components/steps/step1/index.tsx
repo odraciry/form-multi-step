@@ -22,7 +22,7 @@ export const Step1 = () => {
     const [styleEmail, setStyleEmail] = useState<String>('hsl(231, 11%, 63%)')
     const [styleNumber, setStyleNumber] = useState<String>('hsl(231, 11%, 63%)')
     const styleInput = 'hsl(354, 84%, 57%)'
-    const styleInputCheck = 'hsl(213, 96%, 18%)'
+    const styleInputCheck = 'hsl(213, 96%, 18%)' 
     const verifica = () => {
         
     }
