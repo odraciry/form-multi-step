@@ -8,7 +8,7 @@ export const Step4 = () => {
     const context = useContext(StepContext);
     const [lista, setLista] = useState(context.getStep3)
     // const [count, setCount] = useState(0)
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(context.getStep2.preco)
     // let total = context.getStep2.preco
 
 
@@ -22,7 +22,7 @@ export const Step4 = () => {
         let count = 0
         context.step3[0].map((item: any) => {
             count += item.preco 
-            setTotal(count + context.getStep2.preco) 
+            setTotal(total + count) 
              console.log("count: "+count)
         })
     }, [])

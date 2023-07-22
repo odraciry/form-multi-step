@@ -32,9 +32,9 @@ export const Step4Style = styled.div`
         flex-direction: column;
         width: 80%;
         height: 40%;
-        background-color: hsl(217, 100%, 95%);
+        background-color: hsl(217, 100%, 98%);
         padding: 5%;
-        border-radius: 12px;
+        border-radius: 4px;
         #plan{
             display: flex;
             justify-content: space-between;
@@ -76,5 +76,15 @@ export const Step4Style = styled.div`
                     font-weight: 700;
                 }
             }
+    }
+    @media screen and (min-width: 1000px ){
+        position: initial;
+        box-shadow: none;
+        #title{
+            width: 70%;
+        }
+        #infos{
+            width: 70%;
+        }
     }
 `;

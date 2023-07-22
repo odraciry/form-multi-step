@@ -64,4 +64,8 @@ export const Step1Style = styled.div`
             }
         }
     }
+    @media screen and (min-width: 1000px ){
+        position: initial;
+        box-shadow: none;
+    }
 `;

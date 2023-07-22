@@ -45,10 +45,12 @@ export const Step3Style = styled.div`
             background: none;
             padding: .5rem;
             position: relative;
+            cursor: pointer;
             
                 input{
                     height: 1rem;
                     width: 1rem;
+                    cursor: pointer;
                 }
                 h2{
                     font-size: 1.1rem;
@@ -75,6 +77,16 @@ export const Step3Style = styled.div`
         }
         .complemento:focus{
             border: 2px solid hsl(213, 96%, 18%);
+        }
+    }
+    @media screen and (min-width: 1000px ){
+        position: initial;
+        box-shadow: none;
+        #title{
+            width: 70%;
+        }
+        #complementos{
+            width: 80%;
         }
     }
 `;

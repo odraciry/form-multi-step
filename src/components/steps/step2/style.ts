@@ -44,6 +44,8 @@ export const Step2Style = styled.div`
             border: 1px solid hsl(231, 11%, 63%);
             border-radius: 6px;
             background: none;
+            cursor: pointer;
+            transition: 1s all;
             img{
                 margin: 1rem;
             }
@@ -66,7 +68,12 @@ export const Step2Style = styled.div`
             }
         }
         .plan:focus{
+            transition: 1s;
+            background-color: hsl(206, 94%, 97%);
             border: 2px solid hsl(213, 96%, 18%);
+        }
+        .plan:hover{
+            background-color: hsl(206, 94%, 97%);
         }
     }
     #escolha{
@@ -75,6 +82,7 @@ export const Step2Style = styled.div`
         width: 100%;
         height: 5rem;
         align-items: center;
+        background-color: hsl(217, 100%, 99%);
         p{
             font-weight: 700;
             color: hsl(213, 96%, 18%);
@@ -88,6 +96,7 @@ export const Step2Style = styled.div`
             border-radius: 15px;
             background-color: hsl(213, 96%, 18%);
             position: relative;
+            cursor: pointer;
         }
         span{
             position: absolute;
@@ -101,4 +110,36 @@ export const Step2Style = styled.div`
             transition: 1s all;
         }
     }
+    @media screen and (min-width: 1000px ){
+        position: initial;
+        box-shadow: none;
+        #title{
+            width: 70%;
+        }
+        #plans{
+            transform: translateY(2rem);
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            .plan{
+                flex-direction: column;
+                height: 12rem;
+                width: 9rem;
+                align-items: flex-start;
+                img{
+                    margin-bottom: 3rem;
+                }
+                div{
+                    margin-left: 1rem;
+                    span{
+                        margin-top: .5rem;
+                    }
+                }
+            }
+        }
+        #escolha{
+        transform: translateY(-2rem);
+    }
+    }
+    
 `;
