@@ -45,7 +45,8 @@ export const StepProvider = ({ children }: { children: React.ReactNode }) => {
     const getStep2 = {
         plano : step2.plano,
         valor: step2.valor,
-        pagamento: step2.pagamento
+        pagamento: step2.pagamento,
+        preco: step2.preco
     }
     const setterStep2 = (plan: IPlan) => {
         console.log('step2 ok!')

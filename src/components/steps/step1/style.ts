@@ -41,6 +41,14 @@ export const Step1Style = styled.div`
                 color: hsl(213, 96%, 18%);
                 font-weight: 500;
                 margin-bottom: 2px;
+                display: flex;
+                position: relative;
+                span{
+                    position: absolute;
+                    right: 1rem;
+                    color: hsl(354, 84%, 57%);
+                    font-size: .9rem;
+                }
             }
             input{
                 padding: .5rem;

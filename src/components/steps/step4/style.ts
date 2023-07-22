@@ -32,7 +32,7 @@ export const Step4Style = styled.div`
         flex-direction: column;
         width: 80%;
         height: 40%;
-        background-color: hsl(217, 100%, 97%);
+        background-color: hsl(217, 100%, 95%);
         padding: 5%;
         border-radius: 12px;
         #plan{
@@ -49,6 +49,8 @@ export const Step4Style = styled.div`
             p{
                 margin-top: .5rem;
                 position: relative;
+                font-weight: 500;
+
                 span{
                     position: absolute;
                     right: 2px;
@@ -56,5 +58,23 @@ export const Step4Style = styled.div`
                 }
             }
         }
+    }
+    #total{
+        width: 80%;
+        height: 20%;
+        p{
+                padding-top: 1rem;
+                color: hsl(231, 11%, 63%);
+                margin-top: .5rem;
+                position: relative;
+                font-size: 1.1rem;
+
+                span{
+                    position: absolute;
+                    right: 2px;
+                    color: hsl(243, 100%, 62%);
+                    font-weight: 700;
+                }
+            }
     }
 `;

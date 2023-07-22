@@ -5,7 +5,8 @@ import { StepContext } from "../../../context";
 export interface IComplemento {
     id: number,
     service: string,
-    value: string
+    value: string,
+    preco: number
 }
 
 export const Step3 = () => {
@@ -34,7 +35,7 @@ export const Step3 = () => {
                 <button className="complemento" onClick={() =>{
                     setCheck1(!check1);
                     if(!check1){
-                        setChecks([...checks, { service: 'Online service', value: monthOrYear ? '+1/mo' : '+10/yr', id: 1 }])
+                        setChecks([...checks, { service: 'Online service', value: monthOrYear ? '+1/mo' : '+10/yr', id: 1, preco: monthOrYear ? 1 : 10 }])
                     } else {
                         setChecks(checks.filter((item) => item.id != 1))
                     }
@@ -49,7 +50,7 @@ export const Step3 = () => {
                 <button className="complemento" onClick={() =>{
                     setCheck2(!check2);
                     if(!check2){
-                        setChecks([...checks, { service: 'Larger storage', value: monthOrYear ? '+2/mo' : '+20/yr', id: 2 }])
+                        setChecks([...checks, { service: 'Larger storage', value: monthOrYear ? '+2/mo' : '+20/yr', id: 2, preco: monthOrYear ? 2 : 20  }])
                     } else { 
                         setChecks(checks.filter((item) => item.id != 2))
                     }
@@ -64,7 +65,7 @@ export const Step3 = () => {
                 <button className="complemento" onClick={() =>{
                     setCheck3(!check3); 
                     if(!check3){
-                        setChecks([...checks, { service: 'Customizable profile', value: monthOrYear ? '+2/mo' : '+20/yr', id: 3 }])
+                        setChecks([...checks, { service: 'Customizable profile', value: monthOrYear ? '+2/mo' : '+20/yr', id: 3, preco: monthOrYear ? 2 : 20 }])
                     } else {
                         setChecks(checks.filter((item) => item.id != 3))
                     }

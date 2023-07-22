@@ -13,7 +13,8 @@ interface IPagamento {
 export interface IPlan {
     plano: string,
     valor: string,
-    pagamento: string
+    pagamento: string,
+    preco: number
 }
 
 export const Step2 = () => {
@@ -56,7 +57,7 @@ export const Step2 = () => {
             </div> 
             <div id="plans">
                 <button className="plan" onClick={() => {
-                    monthly ? setPlan({ plano: 'Arcade', valor: pagMonth.arcade, pagamento: 'mo' }) : setPlan({ plano: 'Arcade', valor: pagYear.arcade, pagamento: 'yr' })
+                    monthly ? setPlan({ plano: 'Arcade', valor: pagMonth.arcade, pagamento: 'mo', preco: 9 }) : setPlan({ plano: 'Arcade', valor: pagYear.arcade, pagamento: 'yr', preco: 90 })
                     context.setterStep2(plan)
                 }}
                 
@@ -69,7 +70,7 @@ export const Step2 = () => {
                     </div>
                 </button>
                 <button className="plan" onClick={() => {
-                    monthly ? setPlan({ plano: 'Advanced', valor: pagMonth.advanced, pagamento: 'mo' }) : setPlan({ plano: 'Advanced', valor: pagYear.advanced, pagamento: 'yr' })
+                    monthly ? setPlan({ plano: 'Advanced', valor: pagMonth.advanced, pagamento: 'mo', preco: 12 }) : setPlan({ plano: 'Advanced', valor: pagYear.advanced, pagamento: 'yr', preco: 120 })
                     context.setterStep2(plan)
                 }}>
                     <img src={LogoAdvanced} />
@@ -80,7 +81,7 @@ export const Step2 = () => {
                     </div>
                 </button>
                 <button className="plan" onClick={() => { 
-                    monthly ? setPlan({ plano: 'Pro', valor: pagMonth.pro, pagamento: 'mo' }) : setPlan({ plano: 'Pro', valor: pagYear.pro, pagamento: 'yr' })
+                    monthly ? setPlan({ plano: 'Pro', valor: pagMonth.pro, pagamento: 'mo', preco: 15 }) : setPlan({ plano: 'Pro', valor: pagYear.pro, pagamento: 'yr', preco: 150 })
                     context.setterStep2(plan)
                 }}>
                     <img src={LogoPro} />
