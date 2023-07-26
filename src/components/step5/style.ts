@@ -7,7 +7,7 @@ export const Step5Style = styled.div`
     width: 90%;
     left: 5%;
     top: 12%;
-    height: 60vh;
+    height: 60%;
     align-items: center;
     text-align: center;
     display: flex;

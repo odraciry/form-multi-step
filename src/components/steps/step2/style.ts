@@ -83,6 +83,7 @@ export const Step2Style = styled.div`
         height: 5rem;
         align-items: center;
         background-color: hsl(217, 100%, 99%);
+        border-radius: 12px;
         p{
             font-weight: 700;
             color: hsl(213, 96%, 18%);

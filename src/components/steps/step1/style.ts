@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Step1Style = styled.div`
     z-index: 2;
-    position: absolute;
+    position: fixed;
     background-color: hsl(0, 0%, 100%);
     width: 90%;
     left: 5%;
