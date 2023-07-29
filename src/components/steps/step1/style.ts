@@ -2,12 +2,12 @@ import { styled } from "styled-components";
 
 export const Step1Style = styled.div`
     z-index: 2;
-    position: fixed;
+    position: relative;
     background-color: hsl(0, 0%, 100%);
     width: 90%;
     left: 5%;
     top: 12%;
-    height: 70vh;
+    min-height: 70vh;
     align-items: center;
     text-align: left;
     display: flex;
